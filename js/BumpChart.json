@@ -1,0 +1,192 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 400,
+  "title": "Most Targeted Cybercrime Industries",
+  "data": {
+    "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/data/MostTargetedInductries2017-2023.csv"
+  },
+  "params": [
+    {
+      "name": "sector_collection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Financial",
+          "Social Media",
+          "SAAS / Webmail",
+          "Other",
+          "Logistics / Shipping",
+          "Payment",
+          "Telecommunication",
+          "eCommerce / Retail",
+          "Cryptocurrency",
+          "Gaming",
+          "Travel"
+        ],
+        "labels": [
+          "Show All",
+          "Financial",
+          "Social Media",
+          "SAAS / Webmail",
+          "Other",
+          "Logistics / Shipping",
+          "Payment",
+          "Telecommunication",
+          "eCommerce / Retail",
+          "Cryptocurrency",
+          "Gaming",
+          "Travel"
+        ],
+        "name": "Sector Collection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "trim(datum.Sector)",
+      "as": "Sector_cleaned"
+    },
+    {
+      "calculate": "datum.Value === null ? null : parseFloat(datum.Value)",
+      "as": "Value"
+    },
+    {
+      "window": [{ "op": "rank", "as": "rank" }],
+      "groupby": ["Year"],
+      "sort": [{ "field": "Value", "order": "descending" }]
+    },
+    {
+      "filter": "sector_collection == null || datum.Sector_cleaned == sector_collection"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "interpolate": "monotone",
+        "size": 4,
+        "point": {
+          "size": 200
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "axis": {
+            "title": "Year",
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative",
+          "scale": {
+            "reverse": true,
+            "domain": [1, 10]
+          },
+          "axis": { "title": "Rank" }
+        },
+        "color": {
+          "field": "Sector_cleaned",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {
+            "domain": [
+              "Financial",
+              "Social Media",
+              "SAAS / Webmail",
+              "Other",
+              "Logistics / Shipping",
+              "Payment",
+              "Telecommunication",
+              "eCommerce / Retail",
+              "Cryptocurrency",
+              "Gaming",
+              "Travel"
+            ],
+            "range": [
+              "#1f77b4",
+              "#ff7f0e",
+              "#2ca02c",
+              "#FF677D",
+              "#9467bd",
+              "#8c564b",
+              "#e377c2",
+              "#7f7f7f",
+              "#bcbd22",
+              "#17becf",
+              "#aec7e8"
+            ]
+          }
+        },
+        "tooltip": [
+          { "field": "Sector_cleaned", "type": "nominal", "title": "Sector" },
+          { "field": "Year", "type": "ordinal", "title": "Year" },
+          { "field": "Value", "type": "quantitative", "title": "Value" },
+          { "field": "rank", "type": "quantitative", "title": "Rank" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 12,
+        "fontWeight": "normal"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "rank",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "line_bottom",
+        "dx": 20
+      },
+      "transform": [
+        {
+          "filter": "datum.Year == '2023'"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Value"
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ]
+}
