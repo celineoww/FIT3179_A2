@@ -163,8 +163,9 @@
       "mark": {
         "type": "text",
         "align": "center",
-        "baseline": "line_bottom",
-        "dx": 20
+        "baseline": "line-bottom",
+        "dx": 20,
+        "fontWeight": "bold"
       },
       "transform": [
         {
