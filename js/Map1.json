@@ -3,12 +3,45 @@
   "title": "National CyberSecurity Index 2023",
   "width": "container",
   "height": 400,
+  
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 150,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 1000,
+        "step": 50,
+        "name": "Zoom Level: "
+      }
+    },
+    {
+      "name": "region_select",
+      "value": "Whole Map",
+      "bind": {
+        "input": "select",
+        "options": ["Whole Map", "Europe", "Africa", "America", "Asia Pacific"],
+        "name": "Select Region: "
+      }
+    }
+  ],
+  
+  "projection": {
+    "type": "equalEarth",
+    "center": {
+      "expr": "region_select === 'Whole Map' ? [0, 0] : region_select === 'Europe' ? [10, 50] : region_select === 'Africa' ? [20, 0] : region_select === 'America' ? [-100, 20] : [135, -15]"
+    },
+    "scale": {
+      "expr": "region_select === 'Whole Map' ? zoom_level : zoom_level * 2"
+    }
+  },
+  
   "data": {
     "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/js/ne_110m.json",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
-  "projection": {"type": "equalEarth"},
-
+  
   "layer": [
     {
       "transform": [
