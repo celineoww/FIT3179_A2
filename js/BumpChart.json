@@ -165,7 +165,8 @@
         "align": "center",
         "baseline": "line-bottom",
         "dx": 20,
-        "fontWeight": "bold"
+        "fontWeight": "bold",
+        "fontSize": 14
       },
       "transform": [
         {
