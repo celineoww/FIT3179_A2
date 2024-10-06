@@ -1,62 +1,62 @@
-﻿Threats,Year,Total
-Content Related,2017,46
-Malicious Codes,2017,814
-Denial of Service,2017,40
-Intrusion,2017,"2,011"
-Intrusion Attempt,2017,266
-Spam,2017,344
-Fraud,2017,"3,821"
-Vulnerabilities Report,2017,60
-Cyber Harassment,2017,560
-Intrusion Attempt,2018,"1,805"
-Spam,2018,342
-Cyber Harassment,2018,356
-Content Related,2018,111
-Malicious Codes,2018,"1,700"
-Vulnerabilities Report,2018,92
-Intrusion,2018,"1,160"
-Fraud,2018,"5,123"
-Denial of Service,2018,10
-Intrusion Attempt,2019,104
-Spam,2019,129
-Fraud,2019,"7,774"
-Denial of Service,2019,19
-Intrusion,2019,"1,359"
-Vulnerabilities Report,2019,91
-Cyber Harassment,2019,260
-Malicious Codes,2019,738
-Content Related,2019,298
-Spam,2020,145
-Intrusion Attempt,2020,116
-Denial of Service,2020,16
-Fraud,2020,"7,593"
-Cyber Harassment,2020,596
-Vulnerabilities Report,2020,117
-Malicious Codes,2020,593
-Content Related,2020,170
-Intrusion,2020,"1,444"
-Spam,2021,102
-Intrusion,2021,"1,410"
-Cyber Harassment,2021,417
-Vulnerabilities Report,2021,69
-Intrusion Attempt,2021,159
-Denial of Service,2021,22
-Malicious Codes,2021,648
-Content Related,2021,91
-Fraud,2021,"7,098"
-Spam,2022,478
-Intrusion,2022,755
-Malicious Codes,2022,"1,023"
-Denial of Service,2022,17
-Fraud,2022,"4,741"
-Intrusion Attempt,2022,180
-Content Related,2022,50
-Vulnerabilities Report,2022,48
-Denial of Service,2023,25
-Intrusion,2023,508
-Content Related,2023,646
-Intrusion Attempt,2023,354
-Vulnerabilities Report,2023,91
-Malicious Codes,2023,509
-Fraud,2023,"3,705"
-Spam,2023,79
+﻿"Year","Threats","Total"
+2017,"Content Related",46
+2018,"Content Related",111
+2019,"Content Related",298
+2020,"Content Related",170
+2021,"Content Related",91
+2022,"Content Related",50
+2023,"Content Related",646
+2017,"Cyber Harassment",560
+2018,"Cyber Harassment",356
+2019,"Cyber Harassment",260
+2020,"Cyber Harassment",596
+2021,"Cyber Harassment",417
+2017,"Denial of Service",40
+2018,"Denial of Service",10
+2019,"Denial of Service",19
+2020,"Denial of Service",16
+2021,"Denial of Service",22
+2022,"Denial of Service",17
+2023,"Denial of Service",25
+2017,"Fraud",3821
+2018,"Fraud",5123
+2019,"Fraud",7774
+2020,"Fraud",7593
+2021,"Fraud",7098
+2022,"Fraud",4741
+2023,"Fraud",3705
+2017,"Intrusion",2011
+2018,"Intrusion",1160
+2019,"Intrusion",1359
+2020,"Intrusion",1444
+2021,"Intrusion",1410
+2022,"Intrusion",755
+2023,"Intrusion",508
+2017,"Intrusion Attempt",266
+2018,"Intrusion Attempt",1805
+2019,"Intrusion Attempt",104
+2020,"Intrusion Attempt",116
+2021,"Intrusion Attempt",159
+2022,"Intrusion Attempt",180
+2023,"Intrusion Attempt",354
+2017,"Malicious Codes",814
+2018,"Malicious Codes",1700
+2019,"Malicious Codes",738
+2020,"Malicious Codes",593
+2021,"Malicious Codes",648
+2022,"Malicious Codes",1023
+2023,"Malicious Codes",509
+2017,"Spam",344
+2018,"Spam",342
+2019,"Spam",129
+2020,"Spam",145
+2021,"Spam",102
+2022,"Spam",478
+2023,"Spam",79
+2017,"Vulnerabilities Report",60
+2018,"Vulnerabilities Report",92
+2019,"Vulnerabilities Report",91
+2020,"Vulnerabilities Report",117
+2021,"Vulnerabilities Report",69
+2022,"Vulnerabilities Report",48
+2023,"Vulnerabilities Report",91
