@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Reported Cyber Incidents by Threat Type (2013-2023)",
-  "width": 800,
+  "width": "container",
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/data/ReportedIncidentsStats2013-2023.csv"

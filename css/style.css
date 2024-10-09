@@ -1,35 +1,97 @@
 /* Apply background color to the entire page */
 html, body {
-    background-color: #f0f0f5; 
-    margin: 0; 
-    padding: 0; 
-    height: 100%; 
-    width: 100%;
-    font-family: 'Source Sans Pro', sans-serif; 
-  }
-  
-  /* Center the h1 title */
-  h1 {
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  /* Center the h2 title */
-  h2 {
-    text-align: center;
-    padding: 8px;
-    margin-bottom: 15px;
+  background-color: #f0f0f5; 
+  padding: 0; 
+  height: 100%; 
+  width: 100%;
+  font-family: 'Source Sans Pro', serif; 
+  font-size: large;
+}
+
+.section {
+	margin-bottom: 40px;
   }
 
-  .visualization {
-    width: 100%; /* Adjust this width as needed */
-    max-width: 1200px; /* Optional: Set a maximum width */
-    margin: 0 auto; /* Center horizontally */
-    text-align: center; /* Center text within the div if needed */
-    background-color: #f0f0f5; /* Optional: Background color for the visualization area */
-    padding: 20px; 
+.card {
+  width: 100%;
+  max-width: 1300px;
+  background-color: #ffffc5;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
   }
-  
 
+  .card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+
+/* Center the h1 title */
+h1 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Center the h2 title */
+h2 {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: gray;
+}
+
+
+/* Center the chart containers */
+.visualization {
+  display: flex;
+  width: 100%;
+  max-width: 1600px; /* Limit the max width for better appearance */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center text inside the container */
+  padding: 20px; /* Padding around the charts */
+  background-color: #ffffc5;
+}
+
+.bumpchart {
+  display: flex;
+  width: 100%;
+  max-width: 1500px; /* Limit the max width for better appearance */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center text inside the container */
+  padding: 20px; /* Padding around the charts */
+  background-color: #ffffc5;
   
+}
+
+.areachart {
+  display: flex;
+  width: 100%;
+  max-width: 1500px; /* Limit the max width for better appearance */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center text inside the container */
+  padding: 20px; /* Padding around the charts */
+  background-color: #ffffc5;
+}
+
+.barchart {
+  display: flex;
+  width: 100%;
+  max-width: 1500px; /* Limit the max width for better appearance */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center text inside the container */
+  padding: 20px; /* Padding around the charts */
+  background-color: #ffffc5;
+}
+

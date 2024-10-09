@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": "container",
     "height": 400,
     "title": "Top 15 Most Used Social Media Platforms (Monthly Active Users vs. Monthly Organic Traffic)",
     "data": {
