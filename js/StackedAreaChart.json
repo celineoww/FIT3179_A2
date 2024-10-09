@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Reported Cyber Incidents by Threat Type (2013-2023)",
+  "width": 800,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/data/ReportedIncidentsStats2013-2023.csv"
+  },
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2023,  
+      "bind": {
+        "input": "range",
+        "min": 2013,
+        "max": 2023,
+        "step": 1,
+        "name": "Year Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Year <= selectedYear"
+    }
+  ],
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Total",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Total Incidents"
+    },
+    "color": {
+      "field": "Threat",
+      "type": "nominal",
+      "title": "Threat Type",
+      "scale": {
+        "scheme": "category20b"
+      }
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Threat", "type": "nominal", "title": "Threat Type"},
+      {"field": "Total", "type": "quantitative", "title": "Total Incidents"}
+    ]
+  },
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    }
+  }
+}
