@@ -95,3 +95,14 @@ p {
   background-color: #ffffc5;
 }
 
+
+.wafflechart {
+  display: flex;
+  width: 100%;
+  max-width: 1500px; /* Limit the max width for better appearance */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center text inside the container */
+  padding: 20px; /* Padding around the charts */
+  background-color: #ffffc5;
+}
+

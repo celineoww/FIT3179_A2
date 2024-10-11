@@ -1,60 +1,104 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 400,
-    "title": "Top 15 Most Used Social Media Platforms (Monthly Active Users vs. Monthly Organic Traffic)",
-    "data": {
-      "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/data/SocialMediaPlatform.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 400,
+  "title": "Top 15 Most Used Social Media Platforms (Monthly Active Users vs. Monthly Organic Traffic)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/data/SocialMediaPlatform.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Ranking <= 15"
     },
-    "transform": [
-      {
-        "filter": "datum.Ranking <= 15"
-      },
-      {
-        "calculate": "datum['Monthly Active Users (million)'] * -1",
-        "as": "Monthly Active Users (million)"
-      },
-      {
-        "fold": ["Monthly Active Users (million)", "Monthly Organic Traffic (million)"],
-        "as": ["Metric", "Value"]
-      }
-    ],
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "Value",
-        "type": "quantitative",
-        "axis": {
-          "title": "Values (millions)"
-        },
-        "scale": {
-          "domain": [-3000, 10000]  
-        }
-      },
-      "y": {
-        "field": "Social Media Network",
-        "type": "ordinal",
-        "sort": {
-          "field": "Value",
-          "order": "descending"
-        },
-        "axis": {
-          "title": "Social Media Platform"
-        }
-      },
-      "color": {
-        "field": "Metric",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Monthly Active Users (million)", "Monthly Organic Traffic (million)"],
-          "range": ["#fa8072", "#00ab9d"]
-        }
-      },
-      "tooltip": [
-        {"field": "Social Media Network", "type": "nominal", "title": "Platform:"},
-        {"field": "Metric", "type": "nominal", "title": "Metric:"},
-        {"field": "Value", "type": "quantitative", "title": "Values (millions):"}
-      ]
+    {
+      "calculate": "datum['Monthly Active Users (million)'] * -1",
+      "as": "Monthly Active Users (million)"
+    },
+    {
+      "fold": ["Monthly Active Users (million)", "Monthly Organic Traffic (million)"],
+      "as": ["Metric", "Value"]
     }
-  }
-  
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadius": 10
+      },
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {
+            "title": "Values (millions)"
+          },
+          "scale": {
+            "domain": [-3000, 12000]  
+          }
+        },
+        "y": {
+          "field": "Social Media Network",
+          "type": "ordinal",
+          "sort": {
+            "field": "Value",
+            "order": "descending"
+          },
+          "axis": {
+            "title": "Social Media Platform"
+          }
+        },
+        "color": {
+          "field": "Metric",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Monthly Active Users (million)", "Monthly Organic Traffic (million)"],
+            "range": ["#fa8072", "#00ab9d"]
+          }
+        },
+        "tooltip": [
+          {"field": "Social Media Network", "type": "nominal", "title": "Platform:"},
+          {"field": "Metric", "type": "nominal", "title": "Metric:"},
+          {"field": "Value", "type": "quantitative", "title": "Values (millions):"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "dy": -5  ,
+        "dx": 20
+
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "Social Media Network",
+            "equal": "Facebook"
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-3000, 10000]  
+          }
+        },
+        "y": {
+          "field": "Social Media Network",
+          "type": "ordinal"
+        },
+        "text": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "black" 
+        }
+      }
+    }
+  ]
+}

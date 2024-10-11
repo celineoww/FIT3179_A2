@@ -22,8 +22,7 @@
           "Telecommunication",
           "eCommerce / Retail",
           "Cryptocurrency",
-          "Gaming",
-          "Travel"
+          "Gaming"
         ],
         "labels": [
           "Show All",
@@ -36,14 +35,16 @@
           "Telecommunication",
           "eCommerce / Retail",
           "Cryptocurrency",
-          "Gaming",
-          "Travel"
+          "Gaming"
         ],
         "name": "Sector Collection: "
       }
     }
   ],
   "transform": [
+    {
+      "filter": "datum.Sector_cleaned != 'Travel'"
+    },
     {
       "calculate": "trim(datum.Sector)",
       "as": "Sector_cleaned"
@@ -69,7 +70,7 @@
         "interpolate": "monotone",
         "size": 4,
         "point": {
-          "size": 200
+          "size": 300
         }
       },
       "encoding": {
@@ -105,8 +106,7 @@
               "Telecommunication",
               "eCommerce / Retail",
               "Cryptocurrency",
-              "Gaming",
-              "Travel"
+              "Gaming"
             ],
             "range": [
               "#1f77b4",
@@ -118,8 +118,7 @@
               "#e377c2",
               "#7f7f7f",
               "#bcbd22",
-              "#17becf",
-              "#aec7e8"
+              "#17becf"
             ]
           }
         },

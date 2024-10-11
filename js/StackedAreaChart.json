@@ -15,7 +15,7 @@
         "min": 2013,
         "max": 2023,
         "step": 1,
-        "name": "Year Selection: "
+        "name": "Year Selection Range: "
       }
     }
   ],
@@ -24,33 +24,78 @@
       "filter": "datum.Year <= selectedYear"
     }
   ],
-  "mark": "area",
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "ordinal",
-      "title": "Year"
-    },
-    "y": {
-      "field": "Total",
-      "type": "quantitative",
-      "stack": "zero",
-      "title": "Total Incidents"
-    },
-    "color": {
-      "field": "Threat",
-      "type": "nominal",
-      "title": "Threat Type",
-      "scale": {
-        "scheme": "category20b"
+  "layer": [
+    {
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": 0}
+        },
+        "y": {
+          "field": "Total",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": "Total Incidents"
+        },
+        "color": {
+          "field": "Threat",
+          "type": "nominal",
+          "title": "Threat Type",
+          "scale": {
+            "scheme": "tableau10"
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "Threat", "type": "nominal", "title": "Threat Type"},
+          {"field": "Total", "type": "quantitative", "title": "Total Incidents"}
+        ]
       }
     },
-    "tooltip": [
-      {"field": "Year", "type": "ordinal", "title": "Year"},
-      {"field": "Threat", "type": "nominal", "title": "Threat Type"},
-      {"field": "Total", "type": "quantitative", "title": "Total Incidents"}
-    ]
-  },
+    {
+      "mark": {
+        "type": "line",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Total",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "color": {
+          "field": "Threat",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -5,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "black"
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"aggregate": "sum", "field": "Total", "type": "quantitative"},
+        "text": {"aggregate": "sum", "field": "Total", "type": "quantitative"}
+      }
+    }
+  ],
   "config": {
     "axis": {
       "labelFontSize": 12,

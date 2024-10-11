@@ -90,15 +90,41 @@
           "field": "National Cyber Security Index",
           "type": "quantitative",
           "scale": {
-            "domain": [1, 50, 100],
-            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-          },
-          "legend": {"title": "Cybersecurity Index Score"}
+          "domain": [0, 25, 50, 75, 100],  
+          "range": ["#fee8c8", "#fdbb84", "#fc8d59", "#e34a33", "#b30000"]  
+        },
+        "legend": {
+          "title": "Cybersecurity Index Score"
+        }
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
           {"field": "National Cyber Security Index", "type": "quantitative"}
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"country": "United States of America", "longitude": -100, "latitude": 40},
+          {"country": "United Kingdom", "longitude": -3, "latitude": 55},
+          {"country": "Malaysia", "longitude": 101.9758, "latitude": 4.2105},
+          {"country": "Australia", "longitude": 133.7751, "latitude": -25.2744}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": -5,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "black"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "country", "type": "nominal"}
       }
     }
   ]
