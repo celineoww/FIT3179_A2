@@ -18,63 +18,180 @@
 <body>
  
     
-    <div class="card">
-    <h1>Cybercrime Trends: A Malaysian and Global Perspective</h1>
-    <p>Cybercrime has become a pervasive threat in today's digital landscape, 
-      impacting individuals, businesses, and governments alike. With the rapid advancement of technology and 
-      the increasing reliance on the internet for communication, commerce, and information sharing, 
-      cybercriminals have found new opportunities to exploit vulnerabilities. 
-      Cybercrime encompasses a wide range of illegal activities, including identity theft, data breaches, 
-      financial fraud, and cyberbullying, among others. 
-      Therefore, this visualization will explore the factors and implications of cybercrime in Malaysia and globally.</p>
+    <div class="card-header">
+    <h1>Cybercrime Analysis: A Malaysian and Global Perspective</h1>
+    <div class="card-content">
+      <h2><span style="color: black;">DID YOU KNOW A CYBERATTACK CAN HAPPEN EVERY 39 SECONDS?</span></h2>
     </div>
+
+    <div class="card-content">
+      <p><b>Cybercrime</b> has become a pervasive threat in today's digital landscape, impacting individuals, businesses, and governments alike.
+        With the rapid advancement of technology and the increasing reliance on the internet for communication, commerce, and information sharing, cybercriminals have found new opportunities to exploit vulnerabilities. 
+        Cybercrime encompasses a wide range of illegal activities, including identity theft, data breaches, financial fraud, and cyberbullying, and others.
+        <b>Therefore, this visualization will explore the factors and implications of cybercrime in Malaysia and globally.</b>
+      </p>
+    </div>
+</div>
 
   
 
 
   <div class="card">
-  <h2>Chropleth Map: National Cybersecurity Index</h2>
+  <h2>Choropleth Map: National Cybersecurity Index</h2>
   <div id="choropleth_map" class="visualization">
     
     
   </div>
-  <p>The Choropleth Map shows the National Cybersecurity Index 2023. 
-    It covers various aspects and provides an insights of the ability of each country 
-    to prevent and manage cyber incidents. Malaysia with the value of 79.22% , which shows a average high index score.</p>
+  <div class="card-content-visualization">
+    <p>
+      The visualization begins by demonstrating the <b>National Cybersecurity Index for 2023</b>, offering insights into the ability of various countries to prevent and manage cyber incidents. 
+      <span style="color: darkred;"><b>Belgium</b></span> holds the <b> highest index score</b> of <span style="color: darkred;"><b>94.81%</b></span>, indicating its strong capability in handling cyber incidents. 
+      <span style="color: red;"><b>Malaysia</b></span>, with a score of <span style="color: red;"><b>79.22%</b></span>, reflects a moderately high capability. 
+      The <span style="color: orangered;"><b>United States of America</b></span>, with a score of <span style="color: orangered;"><b>64.94%</b></span> and 
+      <span style="color: rgb(255, 119, 0);"><b>China</b></span> at <span style="color: rgb(255, 119, 0);"><b>51.95%</b></span>, demonstrates a relatively moderate capacity to manage cybersecurity risks, despite the advancement of technology in both country.
+       <span style="color: rgb(202, 163, 118);"><b>Myanmmar</b></span> with the score of <span style="color: rgb(202, 163, 118);"><b>10.39%</b></span> shows a very low capacity to manage cybersecurity risks.
+    
+    
+    </p>
+    
+  </div>
+  
   </div>
 
   <div class="card">
-  <h2>Most Reported Cyber Incidents by Threat Type in Malaysia</h2>
-  <div id="area_chart" class="areachart">
+    <h2>Waffle Chart: Average Weekly Attack Over Region</h2>
+    <div class="waffle-container">
+      <!-- Left Side: Waffle Chart -->
+      <div id="waffle_chart" class="wafflechart">
+      </div>
+  
+      <!-- Right Side: New Container -->
+      <div class="card-content-waffle">
+        <p> Moving on to the next chart, <br><b>Average weekly attack rate by region</b> reveals that <span style="color: darkorange;"><b>Africa</b></span> has the <b>highest</b> percentage at <span style="color: darkorange;"><b>31%</b></span>, 
+          indicating poor cybersecurity prevention across the continent. 
+          This is followed by the <span style="color: rgb(39, 39, 232);"><b>Asia-Pacific (APAC)</b></span> region with <span style="color: rgb(39, 39, 232);"><b>27%</b></span>, and <span style="color: rgb(215, 37, 186);"><b>Latin America</b></span> showing a moderate level at <span style="color: rgb(215, 37, 186);"> <b>16%</b></span> attacks. Regions like <span style="color: green;"><b>Europe</b></span> 
+          and <span style="color: rgb(161, 12, 161);"><b>North America</b></span> have the <b>lowest</b> percentages, both at <b>13%</b> reflecting stronger cybersecurity defenses.
+        </p>
+      </div>
+    </div>
   </div>
-  <p>The stacked area chart shows the most reported cyber incidents by threat type in Malaysia from year 2013 to year 2023. 
-    Fraud has the highest frequency over the years while vulnerabilities Report has the lowest frequency.
-  </p>
-  </div>
+  
 
   <div class="card">
-  <h2>Most Targeted Industries of Cyber Incidents</h2>
+    <h2>Bar Chart: Malaysia Botnet Drones and Malware Infections Over Years</h2>
+    <div id="bar2_chart" class="bar2chart">
+    </div>
+    <div class="card-content-bar2chart">
+      <p> Next, to further explore the cyber incidents in <b>Malaysia</b>, focusing on <span style="color: blue;"><b>Botnet Drones and Malware Infections from 2013 to 2023</b></span>. 
+        The trend started to rise in 2014 and then remained relatively consistent in subsequent years. 
+        However, during the COVID-19 pandemic in <b>2020</b>, there was a significant increase, with infections reaching nearly <b>5.5 million</b>. 
+        By <b>2023</b>, the number hit a peak of <b>7.45 million</b>, marking the <b>highest level</b> recorded during this period.
+      </p>
+    </div>
+    
+    </div>
+
+  <div class="card">
+    <h2>Stacked Area Chart: Most Reported Cyber Incidents by Threat Type in Malaysia</h2>
+    <div class="area-container"> <!-- Container for chart and text -->
+      <div id="area_chart" class="areachart"></div>
+      <div class="card-content-area">
+        <p>This visualization highlights the <b>Cyber Incidents by Threat Type in Malaysia from 2013 to 2023.</b> 
+          <br>The highest number of incidents occurred in <b>2014</b>, with <b>approximately 13,000</b> cases. 
+          <br><span style="color: rgb(13, 173, 222);"><b>Fraud</b></span> consistently accounts for the <b>largest proportion</b> of incidents, indicating that financial-related crimes are highly targeted by cybercriminals. 
+          <br><span style="color: rgb(144, 67, 49);"><b>Vulnerability Reports</b></span> show the <b>lowest proportion</b>, suggesting that either fewer incidents are being reported through official channels or vulnerabilities are underreported.
+        </p>
+      </div>
+    </div>
+  </div>
+    
+
+  <div class="card">
+  <h2>Bump Chart: Most Targeted Industries of Cyber Incidents</h2>
   <div id="bump_chart" class="bumpchart">
   </div>
-  <p>The bump chart shows the most targeted cyber incidents industries over the years 2017 to year 2023. 
-    Payment was ranked number 1 for the first two years, it then drop to ranked 6 at the year 2023. Financial 
-    was mantained at the Top 3 over the years. 
-  </p>
+  <div class="card-content-bump">
+    <p>To further explore, the visualization provide a clear ranking of the <b>most targeted industries for cybercrime from 2017 to 2023.</b>
+      <span style="color: rgb(17, 73, 176);"><b>Financial Sector</b></span> consistently been a top target for cyber incidents, ranking <b>#1 in 2023</b> with the highest score of 24.9. 
+      <span style="color: orange;"><b>Social Media</b></span> shows a sharp rise moving from a lower position to <b>#2</b> at 2023 due to the increasing usage of social platforms making it attractive to attackers. 
+      <span style="color: brown;"><b>Payment systems</b></span>, originally ranked first in 2017 and 2018, have seen a notable drop, falling to <b>#6</b> place by 2023 indicate improvement security measures in the payment has been made over the years.
+    </p>
+  </div>
+  
   </div>
 
   <div class="card">
-  <h2>Most Used Social Media Platform</h2>
-  <div id="bar_chart" class="barchart">
+    <h2>Bidirectional Bar Chart: Most Used Social Media Platform</h2>
+    <div class="bar-container">
+      <div id="bar_chart" class="barchart">
+        <!-- Bar chart will be inserted here -->
+      </div>
+      <div class="card-content-bar">
+        <p>
+          Social Media ranks as the <b>second</b> most targeted sector by cybercriminals, 
+          this chart focus on the top 15 most used social media platforms, 
+          comparing two key metrics: <span style="color: #F1B900;"><b>Most Active Users</b></span> and <span style="color: #030081;"><b>Monthly Organic Traffic</b></span>. <br><b>Facebook</b> dominates, 
+          leading both metrics with <b>3,000 million</b> active users and <b>10,000</b> million in organic traffic. 
+          <b>YouTube</b> follows closely with substantial user activity and traffic. Platforms like Instagram, WhatsApp, 
+          and TikTok shows high organic traffic but comparatively fewer active users. 
+        </p>
+      </div>
+    </div>
   </div>
-  <p> The bar chart shows the most used social media platform as well to visualise the monthly active users and monthly organic traffic.</p>
+  
+  
   </div>
-
+  
   <div class="card">
-    <h2>Average Weekly Attack Over Region</h2>
-    <div id="waffle_chart" class="wafflechart">
-    </div>
-    <p> The bar chart shows the most used social media platform as well to visualise the monthly active users and monthly organic traffic.</p>
-    </div>
+    <div class="card-content">
+      <p style="text-align: left;">
+        Author: Celine Wong Jia Qian 32845413 <br> 
+        Title: Data Visualization 2 - Cybercrime Analysis: A Malaysian and Global Perspective <br>
+        Date: 13/10/2024 <br>
+        Dataset Source: 
+        <br> - NCSI (Estonian e-Governance Academy) <br>
+        <a href="https://ncsi.ega.ee/ncsi-index/" target="_blank">https://ncsi.ega.ee/ncsi-index/</a>
+        
+        <br> - Check Point Research <br>
+        <a href="https://blog.checkpoint.com/research/shifting-attack-landscapes-and-sectors-in-q1-2024-with-a-28-increase-in-cyber-attacks-globally/" target="_blank">
+          https://blog.checkpoint.com/research/shifting-attack-landscapes-and-sectors-in-q1-2024-with-a-28-increase-in-cyber-attacks-globally/
+        </a>
+        
+        <br> - MyCERT (Malaysia Computer Emergency Response Team) <br>
+        <a href="https://www.mycert.org.my/portal/statistics-content?menu=b75e037d-6ee3-4d11-8169-66677d694932&id=6d5714aa-ce83-444b-8e52-9b107f69b422" target="_blank">
+          https://www.mycert.org.my/portal/statistics-content?menu=b75e037d-6ee3-4d11-8169-66677d694932&id=6d5714aa-ce83-444b-8e52-9b107f69b422
+        </a>
+        
+        <br> - MyCERT (Malaysia Computer Emergency Response Team) <br>
+        <a href="https://www.mycert.org.my/portal/statistics-content?menu=b75e037d-6ee3-4d11-8169-66677d694932&id=0d39dd96-835b-44c7-b710-139e560f6ae0" target="_blank">
+          https://www.mycert.org.my/portal/statistics-content?menu=b75e037d-6ee3-4d11-8169-66677d694932&id=0d39dd96-835b-44c7-b710-139e560f6ae0
+        </a>
+        
+        <br> - APWG (Anti-Phishing Working Group) <br>
+        <a href="https://apwg.org/trendsreports/" target="_blank">https://apwg.org/trendsreports/</a>
+        
+        <br> - Exploding Topics (Josh Howarth) <br>
+        <a href="https://explodingtopics.com/blog/top-social-media-platforms" target="_blank">
+          https://explodingtopics.com/blog/top-social-media-platforms
+        </a>
+
+        <br> - Natrot (Header Background Image) <br>
+        <a href="https://www.istockphoto.com/vector/big-data-visualization-concept-dynamic-wave-on-blue-background-wave-of-particles-gm1370742184-440231328" 
+        target="_blank">
+        https://www.istockphoto.com/vector/big-data-visualization-concept-dynamic-wave-on-blue-background-wave-of-particles-gm1370742184-440231328></a>
+      </p>
+      
+      
+  </div>
+ 
+    
+    
+  </div>
+  
+    
+
+    
+  
 
   
   

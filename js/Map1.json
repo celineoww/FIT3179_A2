@@ -109,14 +109,17 @@
           {"country": "United States of America", "longitude": -100, "latitude": 40},
           {"country": "United Kingdom", "longitude": -3, "latitude": 55},
           {"country": "Malaysia", "longitude": 101.9758, "latitude": 4.2105},
-          {"country": "Australia", "longitude": 133.7751, "latitude": -25.2744}
+          {"country": "Australia", "longitude": 133.7751, "latitude": -25.2744},
+          {"country": "China", "longitude": 104.1954, "latitude": 35.8617},
+          {"country": "Belgium", "longitude": 4.469936, "latitude": 50.503887},
+          {"country": "Myanmar", "longitude": 95.9560, "latitude": 21.9162}
         ]
       },
       "mark": {
         "type": "text",
-        "align": "left",
+        "align": "center",
         "dx": 5,
-        "dy": -5,
+        "dy": 0,
         "fontSize": 10,
         "fontWeight": "bold",
         "color": "black"

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 400,
+  "title": "Malaysia Botnet Drones and Malware Infections Over Years",
+  "data": {
+    "url": "https://raw.githubusercontent.com/celineoww/FIT3179_A2/refs/heads/main/data/MalaysiaBotnetDronesAndMalware.csv"
+  },
+  "params": [
+    {
+      "name": "year_collection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "labels": [
+          "Show All",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "name": "Year Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "year_collection == null || datum.Year == year_collection"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "tooltip": true,
+        "size": 50  
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "Value (million)",
+          "type": "quantitative",
+          "title": "Value (million)"
+        },
+        "color": {
+          "field": "Value (million)",
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "domain": [0, 2, 4, 6, 8],
+            "range": [
+              "#73B9EE",
+              "#5494DA",
+              "#3373C4",
+              "#1750AC",
+              "#003396"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -5
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Value (million)",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Value (million)",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

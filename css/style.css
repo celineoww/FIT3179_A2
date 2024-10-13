@@ -12,10 +12,24 @@ html, body {
 	margin-bottom: 40px;
   }
 
+.card-header {
+  width:96%;
+  background-image: url('\istockphoto-1370742184-612x612.jpg');
+  background-size: 100%; /* Adjust to 'contain' if you want the whole image visible */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  color: white; /* Change text color for better contrast */
+}
+  
+
 .card {
   width: 100%;
   max-width: 1300px;
-  background-color: #ffffc5;
+  background-size: 100%;
+  background-color: #00254d;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 20px;
@@ -24,8 +38,24 @@ html, body {
 
   .card-content {
 	display: flex;
+  background-size: 100%;
+  max-width: "container";
 	flex-direction: column;
 	align-items: center;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  }
+
+  .chart-content{
+    display: flex;
+  max-width: 1300px;
+	flex-direction: column;
+	align-items: center;
+  background-color: rgb(243, 236, 226);
+  
   }
 
 
@@ -34,34 +64,58 @@ h1 {
   text-align: center;
   padding: 10px;
   margin-bottom: 20px;
+  font-size: 45px;
 }
 
 /* Center the h2 title */
 h2 {
-  text-align: center;
+  text-align: left;
   padding: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: white;
 }
 
 p {
   font-family: sans-serif;
-  text-align: center;
+  text-align: justify;
   padding: 8px;
   margin-bottom: 15px;
   font-style: italic;
-  color: gray;
+  color: black;
+  font-size: large;
+  line-height: 1.3;
+  
+  
 }
+
+.card-content-visualization {
+	display: flex;
+  width: fit-content;
+  max-width: 1300px;
+  margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  }
 
 
 /* Center the chart containers */
 .visualization {
   display: flex;
   width: 100%;
-  max-width: 1600px; /* Limit the max width for better appearance */
+  max-width: 1300px; /* Limit the max width for better appearance */
   margin: 0 auto; /* Center the container horizontally */
   text-align: center; /* Center text inside the container */
   padding: 20px; /* Padding around the charts */
-  background-color: #ffffc5;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .bumpchart {
@@ -69,40 +123,144 @@ p {
   width: 100%;
   max-width: 1500px; /* Limit the max width for better appearance */
   margin: 0 auto; /* Center the container horizontally */
-  text-align: center; /* Center text inside the container */
   padding: 20px; /* Padding around the charts */
-  background-color: #ffffc5;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  margin-bottom: 20px;
   
 }
 
-.areachart {
-  display: flex;
+.card-content-bump {
+	display: flex;
   width: 100%;
-  max-width: 1500px; /* Limit the max width for better appearance */
-  margin: 0 auto; /* Center the container horizontally */
-  text-align: center; /* Center text inside the container */
-  padding: 20px; /* Padding around the charts */
-  background-color: #ffffc5;
+  max-width: 1250px;
+  margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  }
+
+.area-container {
+  display: flex; /* Flex container for the chart and text */
+  justify-content: space-between; /* Space between chart and text */
+  align-items:center; /* Ensure both chart and container have equal height */
+}
+
+.areachart {
+  flex: 1; /* Make chart take up available space */
+  max-width: 80%; /* Control chart width */
+  margin-right: 20px; /* Add space between chart and text */
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card-content-area {
+  flex: 1; /* Let the text container take up available space */
+  max-width: 30%; /* Set max width for text container */
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: right; /* Align text to the right */
+  display: flex;
+  height: 485px;
+  flex-direction: column;
+  justify-content: center; /* Vertically center text */
+}
+  
+
+.bar-container {
+  display: flex; /* Use flexbox layout to align chart and text side by side */
+  justify-content: space-between; /* Adds space between the chart and text */
+  align-items: stretch; /* Make both the chart and text equal height */
+  width: 100%;
 }
 
 .barchart {
+  flex: 3; /* Chart takes up more space (3 parts out of 4) */
+  max-width: 70%; /* Chart should occupy up to 70% of the container width */
+  margin-right: 20px; /* Add some space between the chart and the text */
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 15px;
+
+}
+
+.card-content-bar {
+  flex: 1; /* Text container takes up 1 part out of 4 */
+  max-width: 30%; /* Limit text area width to 30% */
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: left; /* Align text to the left */
   display: flex;
-  width: 100%;
-  max-width: 1500px; /* Limit the max width for better appearance */
-  margin: 0 auto; /* Center the container horizontally */
-  text-align: center; /* Center text inside the container */
-  padding: 20px; /* Padding around the charts */
-  background-color: #ffffc5;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the text */
 }
 
 
-.wafflechart {
+
+  .waffle-container {
+    display: flex; /* Flex container for the chart and text */
+    justify-content: space-between; /* Ensure the chart and the container are on opposite sides */
+    
+    align-items: stretch; /* Ensure both the chart and the container have equal height */
+  }
+  
+  .wafflechart {
+    margin: 0 auto;
+    flex: 1; /* This makes the chart take up the remaining available space */
+    max-width: fit-content; /* Control the chart width */
+    margin-right: 20px; /* Add some space between the chart and the text */
+    background-color: antiquewhite;
+    border-radius: 15px;
+    max-height: 490px;
+
+  }
+  
+  .card-content-waffle {
+    flex: 1; /* This allows the text container to grow based on available space */
+    max-width: 50%; /* Set max width for the text container */
+    background-color: antiquewhite;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right; /* Align text to the right */
+  }
+  
+
+.bar2chart {
   display: flex;
   width: 100%;
-  max-width: 1500px; /* Limit the max width for better appearance */
+  max-width: 1280px; /* Limit the max width for better appearance */
   margin: 0 auto; /* Center the container horizontally */
-  text-align: center; /* Center text inside the container */
+
   padding: 20px; /* Padding around the charts */
-  background-color: #ffffc5;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  margin-bottom: 20px;
+
 }
+.card-content-bar2chart {
+	display: flex;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  }
 
